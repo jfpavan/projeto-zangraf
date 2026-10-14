@@ -1,0 +1,1 @@
+import {getProducts} from '@/lib/server/catalog';export async function GET(){try{return Response.json({products:await getProducts()})}catch{return Response.json({message:'Não foi possível carregar o catálogo.'},{status:503})}}

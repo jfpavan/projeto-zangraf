@@ -1,0 +1,3 @@
+import {connection} from 'next/server';
+import {getProducts} from '@/lib/server/catalog';
+import {Catalog} from '@/components/catalog'; export const metadata={title:'Nossos álbuns'}; export default async function Albums(){await connection();const products=await getProducts();return <section className="section catalog"><span className="eyebrow">COLEÇÃO DEMONSTRATIVA</span><h1>Qual história você vai guardar?</h1><p>Encontre seu modelo. Os detalhes ficam por sua conta.</p><Catalog products={products}/></section>}

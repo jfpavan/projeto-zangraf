@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <section className="section empty"><span className="eyebrow">PÁGINA NÃO ENCONTRADA</span><h1>Vamos voltar à coleção?</h1><p>O álbum ou a página que você procurou não está disponível.</p><Link className="button" href="/albuns">Explorar álbuns</Link></section>}

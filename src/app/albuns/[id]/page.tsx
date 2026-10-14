@@ -1,0 +1,3 @@
+import {connection} from 'next/server';import {notFound} from 'next/navigation';import {getProduct} from '@/lib/server/catalog';import {Configurator} from '@/components/configurator';
+export async function generateMetadata({params}:{params:Promise<{id:string}>}){await connection();const {id}=await params;return {title:(await getProduct(id))?.name||'Álbum não encontrado'}}
+export default async function Page({params}:{params:Promise<{id:string}>}){await connection();const {id}=await params;const product=await getProduct(id);if(!product)notFound();return <Configurator key={id} product={product}/>}

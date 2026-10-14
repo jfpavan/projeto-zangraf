@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.runtime/
+node-runtime.zip
+node-shasums.txt
+*.tsbuildinfo
+*.log
+
+.env
+.env.*
+!.env.example
+
+.backups/
+Microsoft/
